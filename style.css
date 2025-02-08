@@ -1,0 +1,374 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8FAFC;
+    color: #333;
+}
+* {
+    box-sizing: border-box;
+}
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F8FAFC;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.logo {
+    max-width: 150px;
+    max-height: 80px;
+}
+
+.login-signup {
+    position: absolute;
+    right: 20px;
+}
+
+.login-signup button {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #F6DED8;
+    transition: all 0.3s ease;
+    padding-top: 60px;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 15px 20px;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Sidebar Button */
+.sidebar-btn {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Overlay to close sidebar */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1000;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    color: #333;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+}
+
+.feature-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    width: 250px;
+}
+
+.feature-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Chatbot Icon */
+#chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.chatbot-bg {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: #F6DED8;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+#chatbot-icon img {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Existing styles remain the same, with modifications to chatbot styles */
+
+/* Chatbot Window */
+#chatbot-window {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 400px;
+    max-height: 600px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+.chatbot-header {
+    background: #007bff;
+    color: #fff;
+    padding: 12px;
+    font-size: 18px;
+    text-align: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 12px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.message {
+    max-width: 80%;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 12px;
+    clear: both;
+    font-size: 14px;
+}
+
+.user-message {
+    background-color: #f1f0f0;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.bot-message {
+    background-color: #007bff;
+    color: #fff;
+    align-self: flex-start;
+}
+
+.chatbot-input-container {
+    display: flex;
+    padding: 12px;
+    background-color: #f1f0f0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.send-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.send-btn i {
+    font-size: 18px;
+}
+
+/* Enable scrolling in chatbot messages */
+.chatbot-messages {
+    flex-grow: 1;
+    padding: 12px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 400px; /* Prevent overflowing */
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: #bbb #f1f0f0; /* Firefox */
+}
+
+/* Custom Scrollbar for Chrome, Safari, Edge */
+.chatbot-messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chatbot-messages::-webkit-scrollbar-track {
+    background: #f1f0f0;
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+    background: #bbb;
+    border-radius: 10px;
+}
+
+/* Doctor Recommendation Button */
+.doctor-button {
+    display: flex;
+    justify-content: flex-start;
+    margin: 5px 0;
+}
+
+.doctor-button button {
+    background-color: #FEF9EF;
+    border: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.doctor-button button:hover {
+    background-color: #f5e6cc;
+}
+
+
+/*This ensures proper styling and smooth hover effects. on the book a call image*/
+.feature-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+.feature-card-link:hover .feature-card {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+
+/* Footer Styling */
+footer {
+    background-color: #2D336B;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;  /* Changed from fixed to relative */
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+}
+
+footer a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

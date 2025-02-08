@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>General Physician - Swasthya</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <a href="../index.html" class="logo-link">
+                <img src="https://i.imgur.com/pyPtZ5v.png" alt="Swasthya Logo" class="logo-img">
+            </a>
+        </div>
+        <div class="sidebar-btn" onclick="toggleSidebar()">&#9776;</div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">&times;</div>
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="../consultation/index.html"><i class="fas fa-calendar-check"></i> Book a Call</a></li>
+            <li><a href="#"><i class="fas fa-heartbeat"></i> Health Insurance</a></li>
+            <li><a href="#"><i class="fas fa-pills"></i> Get Medicines</a></li>
+            <li><a href="#"><i class="fas fa-flask"></i> Home Lab Tests</a></li>
+        </ul>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" onclick="toggleSidebar()"></div>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h2>Top Rated Doctors in Bhubaneswar</h2>
+        <div id="bhubaneswar-doctors" class="doctor-section doctor-list"></div>
+
+        <h2>Top Rated Doctors in India</h2>
+        <div id="india-doctors" class="doctor-section doctor-list"></div>
+
+        <h2>Other Doctors</h2>
+        <div id="other-doctors" class="horizontal-list other-doctors"></div>
+    </main>
+
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <div class="chatbot-bg"></div>
+        <img src="https://i.imgur.com/ruUs0Xy.png" alt="Chatbot Icon">
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" style="display: none;">
+        <div class="chatbot-header">Health Assistant</div>
+        <div class="chatbot-messages"></div>
+        <div class="chatbot-input-container">
+            <input type="text" class="user-input" placeholder="Type a message..." onkeypress="handleKeyPress(event)">
+            <button class="send-btn" onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    
+    
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlS-pcGog5Y_hDvfwjspOffsMQr4PNurFGL2ijfLFuq35D5Q/viewform?usp=sharing" target="_blank">Report a Bug</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVaopRbqY8eq9nJoOkTA9dUEb4T8WyprlqNFDYhzKHWOdlgQ/viewform?usp=header" target="_blank">Submit Feedback</a>
+    </footer>
+
+</body>
+</html>

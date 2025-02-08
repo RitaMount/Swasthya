@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swasthya</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="sidebar-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <img src="https://imgur.com/pyPtZ5v.png" alt="Swasthya Logo" class="logo">
+    </header>
+
+    <div class="overlay" onclick="toggleSidebar()"></div>
+
+    <nav class="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Emergency</a></li>
+            <li><a href="consultation/"><i class="fas fa-video"></i> Book a Call with Your Doctor</a></li>
+            <li><a href="#"><i class="fas fa-shield-alt"></i> Get Health Insurance</a></li>
+            <li><a href="#"><i class="fas fa-pills"></i> Get Medicines</a></li>
+            <li><a href="#"><i class="fas fa-vial"></i> Get Your Home Lab Tests</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h2>Who We Are & What We Do</h2>
+            <p>We provide easy healthcare access for elderly and disabled individuals, offering AI-assisted doctor consultations, medicine delivery, and health insurance.</p>
+        </section>
+
+        <section class="features">
+         <a href="consultation/index.html" class="feature-card-link">
+    <div class="feature-card">
+        <img src="https://imgur.com/9j276vV.jpeg" alt="Online Consultation">
+        <h3>Book a Call</h3>
+        <p>Schedule online video consultations with certified doctors.</p>
+    </div>
+</a>
+
+
+            <div class="feature-card">
+                <img src="https://imgur.com/aCgL3Q8.jpeg" alt="Health Insurance">
+                <h3>Health Insurance</h3>
+                <p>Find the best health insurance plans tailored for you.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://imgur.com/rBWDj71.jpeg" alt="Online Medicine">
+                <h3>Get Medicines</h3>
+                <p>Order prescribed medicines and get them delivered to your home.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://imgur.com/RTbc4a2.jpeg" alt="Home Lab Testing">
+                <h3>Home Lab Tests</h3>
+                <p>Book lab tests from the comfort of your home.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <div class="chatbot-bg"></div>
+        <img src="https://imgur.com/ruUs0Xy.png" alt="Chatbot">
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" style="display: none;">
+        <div class="chatbot-header">
+            <span>Health Assistant</span>
+        </div>
+        <div class="chatbot-messages">
+        </div>
+        <div class="chatbot-input-container">
+            <input type="text" class="user-input" placeholder="Type your symptoms..." />
+            <button class="send-btn" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+     <!-- Footer -->
+     <footer>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlS-pcGog5Y_hDvfwjspOffsMQr4PNurFGL2ijfLFuq35D5Q/viewform?usp=sharing" target="_blank">Report a Bug</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVaopRbqY8eq9nJoOkTA9dUEb4T8WyprlqNFDYhzKHWOdlgQ/viewform?usp=header" target="_blank">Submit Feedback</a>
+    </footer>
+</body>
+</html>

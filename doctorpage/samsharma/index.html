@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Consultation - Dr Sam Sharma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <!-- Header with sidebar button and centered logo -->
+    <header>
+        <!-- Sidebar Navigation -->
+<div class="overlay" onclick="toggleSidebar()"></div>
+
+<nav class="sidebar">
+    <div class="close-btn" onclick="toggleSidebar()">
+        <i class="fas fa-times"></i>
+    </div>
+    <ul>
+        <li><a href="../../index.html"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Emergency</a></li>
+        <li><a href="../../consultation/index.html"><i class="fas fa-video"></i> Book a Call with Your Doctor</a></li>
+        <li><a href="#"><i class="fas fa-shield-alt"></i> Get Health Insurance</a></li>
+        <li><a href="#"><i class="fas fa-pills"></i> Get Medicines</a></li>
+        <li><a href="#"><i class="fas fa-vial"></i> Get Your Home Lab Tests</a></li>
+    </ul>
+</nav>
+
+
+    <div class="logo-container">
+        <div class="sidebar-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="../../index.html">
+            <img src="https://imgur.com/pyPtZ5v.png" alt="Swasthya Logo" class="logo">
+        </a>
+    </div>
+</header>
+
+
+
+
+    <!-- Chatbot Icon -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <div class="chatbot-bg"></div>
+        <img src="https://imgur.com/ruUs0Xy.png" alt="Chatbot">
+    </div>
+
+    <!-- Chatbot Window -->
+    <div id="chatbot-window" style="display: none;">
+        <div class="chatbot-header">
+            <span>Health Assistant</span>
+        </div>
+        <div class="chatbot-messages">
+        </div>
+        <div class="chatbot-input-container">
+            <input type="text" class="user-input" placeholder="Type your symptoms..." />
+            <button class="send-btn" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="booking-container">
+            <div class="booking-left">
+                <h2>Book a slot</h2>
+                <p>Choose any time for your video consultation</p>
+                <div class="calendar-section">
+                    <div class="calendar-header">
+                        <button class="prev-month"><i class="fas fa-chevron-left"></i></button>
+                        <h3 id="calendar-month">January 2025</h3>
+                        <button class="next-month"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                    <div class="calendar-weekdays">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                    <div id="calendar-grid" class="calendar-grid"></div>
+                    <div class="continue-container">
+                        <button id="continue-btn" class="continue-btn"><i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </div>
+                <div id="time-selection" class="time-selection">
+                    <h3>Select Time</h3>
+                    <div id="time-grid" class="time-grid"></div>
+                    <button id="book-slot-btn" class="book-slot-btn">Book Consultation</button>
+                </div>
+            </div>
+            <div class="booking-right">
+                <div class="doctor-profile">
+                    <img src="https://i.imgur.com/mJisOCd.jpeg" alt="Dr Sam Sharma">
+                    <h2>Dr Sam Sharma</h2>
+                </div>
+                <div class="profile-tabs">
+                    <button class="tab active" data-tab="about">About</button>
+                    <button class="tab" data-tab="details">Details</button>
+                </div>
+                <div id="about-content" class="tab-content active">
+                    <p>Dr Sam Sharma is a Doctor in Gajapati Nagar, Bhubaneswar with an experience of 54 years in this field. Dr. Sam Sharma practices at Apollo Hospitals in Gajapati Nagar, Bhubaneswar.</p>
+                </div>
+                <div id="details-content" class="tab-content">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li>14 years in medical practice</li>
+                    </ul>
+                    <h3>Medical Certifications</h3>
+                    <ul>
+                        <li>MBBS from Berhampur University (2008)</li>
+                        <li>Member of Odisha Medical Council</li>
+                        <li>Member of Indian Medical Association (IMA)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQs Section -->
+    <section class="faqs" style="max-width: 1600px;">
+        <div class="faq-wrapper">
+            <h2>FAQs</h2>
+            <div class="faq-item">
+                <div class="faq-question">How do I book a consultation?</div>
+                <div class="faq-answer">You can book a consultation by selecting a date and time from the calendar and time slots provided.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What if the doctor doesn't show up?</div>
+                <div class="faq-answer">We will connect you with another doctor or provide you with a refund.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What if i get disconnected during a call?</div>
+                <div class="faq-answer">You can rejoin the call through the app or website.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmation-modal" class="confirmation-modal">
+        <div class="modal-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>Consultation Booked!</h2>
+            <p id="booking-details"></p>
+            <button class="close-modal">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+      <!-- Footer -->
+      <footer>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlS-pcGog5Y_hDvfwjspOffsMQr4PNurFGL2ijfLFuq35D5Q/viewform?usp=sharing" target="_blank">Report a Bug</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVaopRbqY8eq9nJoOkTA9dUEb4T8WyprlqNFDYhzKHWOdlgQ/viewform?usp=header" target="_blank">Submit Feedback</a>
+    </footer>
+</body>
+</html>

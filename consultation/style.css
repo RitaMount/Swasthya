@@ -1,0 +1,402 @@
+/* Import main styles */
+@import url('../style.css');
+
+/* Consultation Banner */
+.consultation-banner {
+    display: flex;
+    background-color: #FEF2F2;
+    padding: 40px 80px;
+    min-height: 400px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner-content {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.banner-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.banner-content h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.banner-features {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.banner-features span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #555;
+}
+
+.banner-features i {
+    color: #007bff;
+}
+
+.consult-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.consult-btn:hover {
+    background-color: #0056b3;
+}
+
+.banner-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Specialities Section */
+.specialities {
+    padding: 40px 80px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.carousel-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.prev-btn, .next-btn {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #f5f5f5;
+    border-color: #bbb;
+}
+
+.categories-carousel {
+    overflow: hidden;
+}
+
+.categories-container {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 20px;
+}
+
+/* Updated category card styles */
+.category-card {
+    position: relative;
+    min-width: 200px;
+    max-width: 200px;
+    height: 240px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Existing CSS */
+.category-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    background-color: #E5E7EB;
+}
+
+/* Fix for Family Medicine Doctor circle */
+.category-card:nth-child(4) .category-icon {
+    width: 80px !important;
+    height: 80px !important;
+    border-radius: 50% !important;
+    background-color: #DDA0DD !important;
+    padding: 0 !important;
+    box-sizing: content-box !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.category-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.category-description {
+    color: #6B7280;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.category-link {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    background-color: #2563EB;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    transition: bottom 0.3s ease;
+}
+
+.category-card:hover .category-link {
+    bottom: 0;
+}
+
+
+/* Chatbot Fix */
+#chatbot-button {
+    display: none; /* Hides the unwanted "Chat" text */
+}
+
+#chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+}
+
+#chatbot-icon img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ensure Chatbot Size is the Same on Both Pages */
+/* Chatbot Window */
+#chatbot-window {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 400px;
+    max-height: 600px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Chatbot Message Container */
+.chatbot-messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    max-height: 400px; /* Adjusted for consistency */
+}
+
+/* Chatbot Input Field */
+.chatbot-input-container {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+
+/* Sidebar Fix */
+.sidebar {
+    position: fixed;
+    left: -300px;
+    width: 250px;
+    transition: left 0.3s;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+/* FAQ Section */
+.faq-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.faq-container {
+    width: 100%;
+}
+
+.faq-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: #333;
+}
+
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.faq-question {
+    padding: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.faq-question:hover {
+    background: #f9fafb;
+}
+
+.faq-question h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    color: #111827;
+}
+
+.faq-arrow {
+    width: 20px;
+    height: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.faq-arrow::before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: #6b7280;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.faq-arrow::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background-color: #6b7280;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    top: calc(50% + 5px);  /* Adjust position slightly for arrow shape */
+}
+
+
+.faq-answer {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    background-color: #f9fafb;
+}
+
+.faq-answer p {
+    margin: 0;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+/* Active states */
+.faq-item.active .faq-arrow {
+    transform: rotate(90deg);
+}
+
+.faq-item.active .faq-answer {
+    padding: 24px;
+    max-height: 1000px;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2D336B;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    max-width: 100vw;
+    position: relative;  /* Changed from fixed to relative */
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+}
+
+footer a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Call - Swasthya</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Load the main script first -->
+    <script src="../script.js" defer></script>
+    <!-- Then load the consultation specific script -->
+    <script src="func.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="sidebar-btn" onclick="toggleSidebar()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <a href="../index.html">
+            <img src="https://imgur.com/pyPtZ5v.png" alt="Swasthya Logo" class="logo">
+        </a>
+    </header>
+
+    <!-- Overlay and Sidebar -->
+    <div class="overlay" onclick="toggleSidebar()"></div>
+    <nav class="sidebar">
+        <div class="close-btn" onclick="toggleSidebar()">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul>
+            <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="#"><i class="fas fa-exclamation-triangle"></i> Emergency</a></li>
+            <li><a href="#"><i class="fas fa-shield-alt"></i> Get Health Insurance</a></li>
+            <li><a href="#"><i class="fas fa-pills"></i> Get Medicines</a></li>
+            <li><a href="#"><i class="fas fa-vial"></i> Get Your Home Lab Tests</a></li>
+        </ul>
+    </nav>
+
+    <!-- Consultation Banner -->
+    <div class="consultation-banner">
+        <div class="banner-content">
+            <h1>Skip the travel!</h1>
+            <h2>Take Online Doctor Consultation</h2>
+            <p>Private consultation + Audio call · Starts at just ₹199</p>
+            <div class="banner-features">
+                <span><i class="fas fa-check-circle"></i> Verified Doctors</span>
+                <span><i class="fas fa-file-prescription"></i> Digital Prescription</span>
+                <span><i class="fas fa-comments"></i> Free Followup</span>
+            </div>
+            <button class="consult-btn">Consult Now</button>
+        </div>
+        <div class="banner-image">
+            <img src="https://i.imgur.com/4rQKEIu.jpeg" alt="Doctor Consultation">
+        </div>
+    </div>
+
+    <!-- Specialities Section -->
+    <section class="specialities">
+        <div class="section-header">
+            <h2>Health Categories</h2>
+            <div class="carousel-controls">
+                <button class="prev-btn" onclick="slideCategories('prev')">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="next-btn" onclick="slideCategories('next')">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="categories-carousel">
+            <div class="categories-container">
+                <!-- Categories will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Chatbot -->
+    <div id="chatbot-icon" onclick="toggleChatbot()">
+        <div class="chatbot-bg"></div>
+        <img src="https://imgur.com/ruUs0Xy.png" alt="Chatbot">
+    </div>
+
+    <div id="chatbot-window" style="display: none;">
+        <div class="chatbot-header">
+            <span>Health Assistant</span>
+        </div>
+        <div class="chatbot-messages"></div>
+        <div class="chatbot-input-container">
+            <input type="text" class="user-input" placeholder="Type your symptoms..." />
+            <button class="send-btn" onclick="sendMessage()">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="faq-container">
+            <h1 class="faq-title">FAQs</h1>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is online doctor consultation?</h3>
+                        <span class="faq-arrow"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Online doctor consultation or online medical consultation allows you to connect with qualified doctors via chat, audio, or video calls. You can discuss symptoms, get medical advice, and receive digital prescriptions from the comfort of your home.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I start online consultation?</h3>
+                        <span class="faq-arrow"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Choose a doctor, select a time slot, make a secure payment, and begin your consultation via chat or video at the scheduled time.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are the doctors qualified?</h3>
+                        <span class="faq-arrow"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, all doctors are verified professionals with valid medical credentials and licenses.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is online consultation safe and secure?</h3>
+                        <span class="faq-arrow"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We ensure complete confidentiality with end-to-end encryption, keeping your data and consultation details secure.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What if I don't get a response from a doctor?</h3>
+                        <span class="faq-arrow"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>If a doctor does not respond, you will be connected with another qualified doctor or receive a full refund.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I get a free online doctor consultation?</h3>
+                        <span class="faq-arrow"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Free consultations are available during promotional periods. Regular consultation fees start at ₹199 with free follow-ups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!-- Footer -->
+     <footer>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdlS-pcGog5Y_hDvfwjspOffsMQr4PNurFGL2ijfLFuq35D5Q/viewform?usp=sharing" target="_blank">Report a Bug</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScVaopRbqY8eq9nJoOkTA9dUEb4T8WyprlqNFDYhzKHWOdlgQ/viewform?usp=header" target="_blank">Submit Feedback</a>
+    </footer>
+</body>
+</html>

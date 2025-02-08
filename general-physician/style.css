@@ -1,0 +1,252 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+    padding-bottom: 60px;  /* Prevents content from hiding behind footer */
+    overflow-x: hidden;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+h2 {
+    text-align: left;
+    margin-bottom: 10px;
+    padding-left: 20px;  /* Adds breathing space on the left */
+}
+
+.doctor-section {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0 20px 10px 20px;  /* Adds padding to the sides */
+}
+
+.doctor-list {
+    display: flex;
+    gap: 15px;
+}
+
+/* ---- Doctor Card (Vertical) ---- */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    width: 160px;
+    text-align: left;
+    display: inline-block;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3 {
+    font-size: 14px;
+    margin: 5px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card p {
+    font-size: 12px;
+    color: gray;
+    margin: 2px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card .location {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.card .location img {
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+/* ⭐ General Rating Styles */
+.rating {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.rating img {
+    width: 14px;
+    height: 14px;
+    margin-right: 2px;
+}
+
+/* ---- Horizontal Doctor Card ---- */
+.horizontal-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 20px;  /* Adds breathing space for horizontal cards */
+}
+
+.horizontal-card {
+    display: flex;
+    align-items: center;
+    background: #e3e3e3;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+}
+
+.horizontal-card img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.horizontal-card .details {
+    flex: 1;
+}
+
+.horizontal-card h3 {
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.horizontal-card p {
+    font-size: 12px;
+    color: gray;
+    margin: 2px 0;
+}
+
+/* ⭐ Fix Rating Position in Horizontal Cards */
+.horizontal-card .rating {
+    position: absolute;
+    right: 10px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+/* 🏥 Fix Location Icon Size in Other Doctors Section */
+.horizontal-card .location img {
+    width: 12px !important;
+    height: 12px !important;
+    margin-right: 5px;
+}
+
+/* 🩺 Special Fixes for "Other Doctors" Section */
+.other-doctors .rating {
+    font-size: 10px;
+    background: none;
+    padding: 0;
+}
+
+.other-doctors .rating img {
+    width: 10px !important;
+    height: 10px !important;
+    margin-right: 2px;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F8FAFC;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.logo-link {
+    display: block;
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+}
+
+.doctor-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
+.doctor-card-link:hover .card {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Footer Styling */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    min-height: calc(100vh - 60px);  /* Adjust '60px' to match your footer height */
+}
+
+footer {
+    height: 50px;  /* Match this with the calc above */
+    background-color: #2D336B;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+
+footer a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+

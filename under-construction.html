@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site Under Construction</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #fbfbfb; /* Updated Background Color */
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between; /* Align text on left and image on right */
+            padding: 0 5%; /* Adjust spacing */
+        }
+
+        .message {
+            max-width: 50%;
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            color: #666;
+        }
+
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end; /* Align image to right */
+        }
+
+        .image-container img {
+            max-height: 100vh; /* Keep full height */
+            max-width: 100%;
+            object-fit: contain; /* Keep original shape */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <h1>Sorry for the inconvenience :(</h1>
+            <p>The site is still under construction. Come back later.</p>
+        </div>
+        <div class="image-container">
+            <img src="https://i.imgur.com/bl5gfAy.jpeg" alt="Under Construction">
+        </div>
+    </div>
+</body>
+</html>
