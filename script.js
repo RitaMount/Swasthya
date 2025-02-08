@@ -180,9 +180,9 @@ function updateDoctorButton(doctorType) {
     // Redirecting based on doctor type
 let doctorPage = doctorType.toLowerCase().replace(/\s+/g, "-") + ".html";
 if (doctorType.toLowerCase() === "general physician") {
-    doctorPage = "/swasthya/general-physician/index.html"; // Use absolute path from the root
+    doctorPage = "/Swasthya/general-physician/index.html"; // Use absolute path from the root
 } else {
-    doctorPage = "/swasthya/under-construction.html"; // Temporary redirect for all others
+    doctorPage = "/Swasthya/under-construction.html"; // Temporary redirect for all others
 }
 
     buttonDiv.innerHTML = `<button onclick="window.location.href='${doctorPage}'">${doctorType}</button>`;
